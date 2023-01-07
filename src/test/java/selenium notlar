@@ -1,0 +1,240 @@
+1-
+Selenium ,farklı tarayıcılarda yada ortamlarda web uygulamalarını test etmek için kullanılan test çerçevesidir yada
+ web uygulamalarının kalite güvencesi için kullanılan test otomasyon araçlar paketidir .
+2-
+Selenium 3 farklı bileşenden  oluşur.
+   1-Selenium IDE 2-Selenium Driver 3-Selenium Grid
+3-
+Selenium nasıl çalışır :1-Driver Seleniumdan komutları alır. 2-Bu komutları API'ında dönüştürür.3-Browserlardan dönen sonuçları alır ve
+ Selenium'a geri göderir.
+4-
+Browser Control Commands 1-get() 2-getTitle() 3-getCurrentURL() 4-getPageSource 5-close() 6-quit
+5_
+Navigation Control Commands 1-back() 2-forword() 3-refersh() 4-to (String URL)->yeni pencere açar.
+6-
+→ driver.manage(). timeouts().implicitlyWait(Duration.ofSeconds(15)): İstenen sayfa açılıncaya kadar
+  max. bekleme süresini belirtir.
+7-
+Maven,Java Tabanlı Projeler oluşturmak ve yönetmek için kullanılan bir araçtır,bir java derleme ve yönetim aracıdır.
+8-
+Maven is Java build and management tool...
+9-
+POM->Project Object Model Maven bir araç (tool), pom bir xml dosyasıdır. pom.xml Maven'in bir parçasıdır
+10-
+  JUnit, en temel framework’tür.
+11-
+   JUnit, Java programlama dilinde birim testleri yazmak ve yürütmek için kullanılan açık kaynaklı bir çerçevedir. En iyi bilinen birim test çerçevelerinden biridir.
+   JUnit Assertions kullanımı yazmış olduğumuz test senaryosunun sonunda elde edilen sonuç (actual result) ile
+   beklenilen sonuçların (expected result) karşılaştırılması yapılması için kullanılır.
+12-
+  Hard Assertions ->her onaylamanın geçmesi lazım  Soft Assertions->bir onaylama gerçekleşmese bile test devam eder.
+13-
+   Bir Selenium WebElement, aslında bir web sitesindeki bir HTML öğesidir.
+14-
+   WebElements Commands
+   sendKeys() command->metin yazdırır.sonra enter2 a basar.
+   isDisplayed() command ->web görünürlüğünün true yada false döndürür.
+   isSelected() command->web element seçili ise true değilse false döndürür.
+   isEnabled() command ->web element eişelebilir ise true değilse true yoksa false döner.
+   submit() command ->web element ile işlem yaparken ENTER tuşuna basma görevi yapar.
+   click() command->tıklama işlemini yapar.
+   getLocation() command ->konum koordinatlarını döndürür.
+   clear() comman->metin alanındaki bir değeri temizleme veya silme işlemi yapar
+   getText() command ->web element içindeki metni alır.
+   getAttribute() command->belirli bir web elementin attributenin değerini alır.
+   getSize() command->belirlenmiş bir web elementinin yüksekliğini ve genişliğini alır .
+15-Locator
+   1-By.id->öğeyi bulmak için en hızlı ve en güvenli yöntem olarak kabul edilir.
+   2-By.name->Name locator, ID gibi kullanılabilir. Birden fazla elemente sahip bir sayfada benzersiz olabilir veya olmayabilir.
+   3-By.className-> ClassName locator, elementin class özelliği kullanılarak bulunmasını sağlar.
+   4-By.tagName->Selenium WebDriver’daki bu locator, div etiketi, a etiket vb. gibi etiket adlarına sahip öğeleri tanımlamak için kullanılır.
+   5-By.linkText->Elementler, bağlantı metni aracılığıyla yerleştirilebilir.
+   6-By.partialLinkText->alnızca kısmi metin kullanmak istediğinizden kaynaklanmaktadır.
+   7-By.xpath->
+               İki farklı XPath türü vardır.
+               • Absolute XPath ->öğe yolunda bir değişiklik yapılması durumunda hata verir.
+               • Relative XPath ->Relative XPath’in faydası daha
+                                  çok kullanılabilir olması ve daha az bakım/maliyet gerektirmesidir.
+   8-CSS Selector->CSS = tagName[attribute name=‘value’] ====>>>>> mostly used css
+                   CSS = "tagName#id value" or just css="#id value" => # means id
+                   CSS = "tagName.class value" or just css=".class value
+16-
+   ChromeOptions Class, Selenium WebDriver'da Chrome sürücüsünün çeşitli özelliklerini değiştirmek için
+   kullanılan bir kavramdır.Chrome'u maksimum modda açma, mevcut uzantıları devre dışı bırakma, açılır pencereleri devre dışı
+                            bırakma vb. gibi çeşitli işlemleri gerçekleştirmenize yardımcı olur.
+17-Chrome Options
+   Most commonly used arguments for ChromeOptions class
+   • start-maximized: Chrome'u büyütme modunda açar.
+   • incognito: Chrome'u gizli modda açar.
+   • headless: Chrome'u başsız modda açar.
+   • disable-extensions: Chrome tarayıcısında mevcut uzantıları devre dışı bırakır.
+   • disable-popup-blocking: Chrome tarayıcısında görüntülenen açılır pencereleri devre dışı bırakır.
+   • make-default-browser: Chrome'u varsayılan tarayıcı yapar.
+   • version: Chrome tarayıcı sürümünü yazdırır.
+   • disable-infobars: Chrome'un "Chrome otomatik yazılım tarafından kontrol ediliyor" bildirimini
+   görüntülemesini engeller.
+
+18-Java Faker Class
+   • Faker değerler üretmek için Faker Class’ından bir obje üretir ve var olan metotları kullanırız.
+19-
+DropDown->Selenium'daki Select Class , HTML SELECT etiketini uygulamak için kullanılan bir yöntemdir.
+ WebElement testDropDown=driver.findElement(By.id("testingDropdown");
+ Select dropdown=new Select(testDropDown);
+ dropdown.selectByIndex(3);
+20-
+Thread sleep() ->Belirlenen sürenin sonuna kadar bekler.Implicit Wait->Webelementi bulununca atlar.
+21-
+Alerts-> görüntüleyen ve belirli işlemler için izin isteyen bazı bilgileri kullanıcıya bildiren küçük açılır
+           kutular/pencerelerdir. Ek olarak, bunları uyarı amaçlı da kullanabiliriz. Bazen kullanıcı uyarı kutusuna birkaç
+           bilgi de girebilir.
+
+           driver.switchTo().alert().accept();
+           driver.switchTo().alert().dismiss();
+           driver.switchTo().alert().getText();
+           driver.switchTo().alert().sendKeys("Text");
+
+22-iFrame’ler arasında geçiş yapmamız gerektiğini anlamalıyız. iFrame’ler arasında geçiş yapmak için driver’ın
+   switchTo().frame() komutunu kullanmalıyız.
+
+    * switchTo.frame (int frame Number)
+   • switchTo.frame (string frame Name Or Id)
+   • switchTo.frame (WebElement frame Element)
+
+   iFrame’den çıkmak için 2 komut vardır.
+   • driver.switchTo( ).parentFrame( );
+   1 üst seviyedeki frame çıkartır.
+   • driver.switchTo( ).defaultContent( );
+   En üstteki frame çıkmak için kullanılır.
+
+ 23-
+    TestBase Class: Her test class’ında tekrar tekrar
+    yazdığımız setup ve teardown metotları tekrar
+    yazmaktan kurtulmak için Java OOP konsepti kullanarak
+    oluşturduğumuz bir class’dır.Biz hep child class’lardan kullanacağımız için protected yapmayı yapmayı tercih ediyoruz.
+
+24-
+   Window Handle Methodları
+   driver.getWindowHandle(); → Mevcut sayfanın window handle değerini alır.
+   driver.switchTo().window(switch); → Window handle değerini kullanarak pencereler arası geçiş yapar.
+   driver.switchTo().newWindow(WindowType.TAB); → Yeni TAB oluşturarak geçiş yapar.
+   driver.switchTo().newWindow(WindowType.WINDOW); → Yeni WINDOW oluşturarak geçiş yapar.
+   driver.getWindowHandles(); → Tüm sayfaların window handle değerini alır.
+
+25-Review
+   iFrame: iFrame etiketi kullanılarak oluşturulur. Sayfa içinde sayfa - iframe'i -index, id/class, WebElement
+   arasında geçiş yaparak ele alınır. - driver.switchto().frame (3 Seçenek)
+   Alerts: JavaScript pop-up'larıdır. Teste devam etmek için uyarılar kabul edilmeli veya iptal edilmelidir.
+   accept()-clicking ok / dismiss()-clicking cancel / getText () – Alertten text alma
+   sendKeys()-alerte text gönderme - driver.switchTo().alerts() (4 Seçenek)
+   Multiple Tabs/Windows: Bazı sayfalar yeni pencereler açar, sonrasında 2 pencere ile karşılaşırız.
+   getWindowHandle(): Sayfanın window handle değerini String olarak döndürür.
+   getWindowHandles(): Tüm açık sayfaların window handle değerini Set<String> olarak döndürür.
+   driver.switchTo().window(Geçilmek istenen sayfanın WH değeri);
+
+26-Actions
+   • Kullanıcı web’i keşfederken herhangi bir butona tıklama, metin girme, çift tıklama, sağ tıklama,
+   sürükle-bırak, açılır menüden seçim yapma, yeniden boyutlandırma vb. gibi çeşitli işlemler gerçekleştirir.
+
+   Action ise tek bir kullanıcı etkileşimi eylemini temsil eden bir interface-arayüzdür. En yaygın olarak kullanılan
+   perform() yöntemlerinden birini içerir.
+
+27-
+   Mouse Actions
+   click(): Geçerli konumu tıklamak için kullanılır.
+   doubleClick(): Fare konumuna çift tıklama gerçekleştirmek için kullanılır.
+   clickAndHold(): Fare tıklamasını serbest bırakmadan gerçekleştirmek için kullanılır.
+   contextClick(): Geçerli fare konumuna sağ fare tıklaması gerçekleştirmek için kullanılır.
+   moveToElement (WebElement target): Fare işaretçisini hedef konumun merkezine taşımak için kullanılır.
+   dragAndDrop(WebElement source, WebElement target): Öğeyi kaynaktan sürüklemek ve hedef konuma
+   bırakmak için kullanılır.
+   dragAndDropBy(source, xOffset, yOffset): Geçerli konumu tıklayıp basılı tutmak için verilen ofset değeri ve
+   ardından fareyi bırakmak için kullanılır.
+   (X = Yatay Kaydır, Y= Dikey Kaydır)
+   release(): Geçerli konumdaki sol fare düğmesini serbest bırakmak için kullanılır
+28-
+   Keyboard Actions
+   sendKeys (): Metin kutusuna, text yazmak için kullanılır.
+   keyDown (): Bir tuşu basılı tutmak için kullanılır. Tuşlar Shift, Ctrl ve Alt anlamına gelir.
+   keyUp (): keyDown() yönteminden sonra zaten basılmış olan bir tuşu serbest bırakmak için kullanılır yani hedefe
+   odaklandıktan sonra tuşu serbest bırakır.
+
+29- JS Executor ->Selenium Webdriver'da, bir web sayfasındaki işlemleri tanımlamak ve gerçekleştirmek için XPath, CSS vb. gibi
+   konum belirleyiciler kullanılır
+                                  Bu konum belirleyicilerin çalışmaması durumunda JavaScriptExecutor'ı kullanabilirsiniz. Bir web öğesinde
+                                  istenen bir işlemi gerçekleştirmek için JavaScriptExecutor'ı kullanabilirsiniz
+
+    JavascriptExecutor js = (JavascriptExecutor)driver;
+
+    scrollIntoView () web sayfasındaki bir öğenin görünürlüğüne göre kaydırır.
+    js.executeScript("arguments[0].scrollIntoView();",WebElement);
+
+30-Robot Sınıfı: Selenium komut dosyalarında, tarayıcı ve masaüstü açılır pencerelerini otomatikleştirmek için Robot
+   classını kullanırız .
+   Genellikle tarayıcılara/tarayıcılardan dosya yükleme/indirme işlemlerinde kullanılır. Fare ve klavye işlemlerini
+   gerçekleştirmek için Robot classını kullanıyoruz.
+   Actions class bir fareyi simüle eder. Fare imlecini hareket ettirmez.
+   Oysa Robot class, Selenium'un gerçek bir fare kullanmasını sağlar.
+
+ Selenium Robot Class Methodları
+ • keyPress(): Belirli bir tuşa basar.
+ • keyRelease(): Belirli bir klavye tuşunu serbest bırakır.
+ • mousePress(): Girilen değere göre fare düğmesine basar.
+ • mousePress(1): Birincil tuşa basar.
+ • mousePress(2): İkincil tuşa basar.
+ • mouseRelease(): Fare düğmesini serbest bırakır.
+ • mouseMove(): Fare işaretçisini verilen ekran koordinatlarına taşır.
+ • mouseWheel(): Verilen değer negatif ise aşağı kaydırılır, pozitif değer çarkı yukarı kaydırılırsa fareyi kaydırır
+
+31-
+   Cookies - çerezler genellikle bir web sitesindeki bir kullanıcının kimliğini tanımak için kullanılır. Basit bir
+   ifadeyle, çerez, bir web uygulamasından gönderilen ve bir tarayıcıda depolanan verilerin bir parçasıdır.
+   Bir kullanıcı bir web sitesine göz attığında, kullanıcı ve favorileri hakkındaki bilgiler, key-value pairs(çiftleri)
+   biçiminde bir tanımlama bilgisi olarak saklanır.
+
+   driver.manage(). method’u ile cookies’leri handle edebilir.
+
+
+32-
+  Files;Selenium ile windows uygulamalarını test edemiyoruz.
+        Ama test etmek için JAVA kullanabiliriz.
+        Bilgisayarımızda bir dosya olup olmadığını(exist) kontrol
+        etmek için Java'yı kullanabiliriz
+        System.getProperty ("user.dir"); İçinde bulunulan
+        klasörün yolunu (path) verir.
+        System.getProperty ("user.home"); Bilgisayarımızda
+        bulunan user klasörünü verir.
+
+        Files.exists (Paths.get (filePath)); Bilgisayarınızda
+        dosyanın olup olmadığını kontrol eder
+
+33-Apache POI, excel sayfaları, powerpoint ve word dosyaları gibi farklı Microsoft dosyalarını okumamıza,
+   yazmamıza ve işlememize yardımcı olan bir Java kütüphaneleri koleksiyonu sunan bir API'dir.
+
+   Workbook → Excel dosyamız.
+   Sheet → Açık excel sekmesi (Sheet1, Sheet2, etc.)
+   Row (Satır) → Java, yalnızca içeride veri varsa satırları sayar. Default olarak, Java perspektifinden satır sayısı 0’dır.
+   Cells (Hücre) → Java her satıra bakar ve yalnızca hücrede veri varsa hücre sayısını sayar
+
+34-
+   ScreenShots
+   Web sayfasının şu anda görünür olan bölümünün Selenium WebDriver kullanarak bir ekran görüntüsü
+   yakalamanın temel sözdizimi verilmiştir.
+   WebDriver objesini (driver) TakeScreenshot’ a dönüştürüyoruz. Ve OutputType .FILE parametresini sağlayarak
+   bir görüntü dosyası oluşturmak için getScreenshotAs() yöntemini çağırırız.
+   FileUtils Class’ını kullanarak, yukarıda gösterildiği gibi, görüntüyü istediğimiz konuma kopyalamak için bu File
+   nesnesini kullanabiliriz
+
+35-<table> , bir web tablosunu tanımlamak için kullanılan HTML etiketidir. Tablonun başlığın tanımlamak için <th> kullanılırken ,
+web tablosu için sırasıyla satırları ve sütunları tanımlamak için <tr> ve <td> etiketleri kullanılır.
+
+table//tbody//tr → tbody içindeki tüm satırları döndürür.
+table//tbody//tr[1] → tbody'deki ilk satırı döndürür.
+table//tbody//tr[1]//td → İlk satırdaki tüm tablo hücrelerini döndürür.
+table//tbody//tr[1]//td[4] → tbody'deki ilk satırdaki 4. hücreyi döndürür.
+table//tbody//tr[4]//td[5] → 4. satır 5. sütun
+table//tbody//tr[10]//td[2] → Satır 10 data 2
+table//tbody//tr//td[5] → 5. sütundaki tüm satırları döndürür
+
+36_
+Maven is a build automation tool used primarily for Java projects.
+ Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages.
